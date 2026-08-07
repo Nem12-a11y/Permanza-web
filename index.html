@@ -68,7 +68,7 @@
     margin-bottom:22px;
   }
   .eyebrow::before{content:''; width:26px; height:1px; background:var(--teal-dark);}
-  .hero h1{font-size:clamp(2.4rem, 5.6vw, 3.5rem); max-width:760px;}
+  .hero h1{font-size:clamp(2.4rem, 5.6vw, 4.1rem); max-width:760px;}
   .hero h1 em{font-style:normal; color:var(--teal);}
   .hero p.lead{max-width:520px; font-size:1.08rem; margin-top:22px; opacity:0.82;}
   .hero-actions{display:flex; gap:14px; margin-top:34px; flex-wrap:wrap;}
@@ -96,13 +96,13 @@
     letter-spacing:0.1em; padding:6px 10px; border-radius:2px;
   }
   .layer-dirty{
-    background-image:url('assets/piso-antes.jpg');
+    background-image:url("piso-antes.jpg");
     background-size:cover;
     background-position:center;
   }
   .layer-dirty .tag{background:rgba(0,0,0,0.35); color:#F6F5F1;}
   .layer-clean{
-    background-image:url('assets/piso-despues.jpg');
+    background-image:url("piso-despues.jpg");
     background-size:cover;
     background-position:center;
     position:absolute; inset:0; display:flex; align-items:flex-end; padding:22px;
@@ -199,15 +199,13 @@
   .footer-row{display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px;}
 </style>
 </head>
-<body><div style="background:#16233F; color:#fff; text-align:center; padding:10px; font-family:'IBM Plex Mono', monospace; font-size:0.85rem; letter-spacing:0.05em;">
-  🚧 Página en construcción — contenidos en proceso de actualización
-</div>
+<body>
 
 <header>
   <nav>
     <div class="logo-lockup">
       <div class="logo">Perman<span>za</span></div>
-      <div class="logo-sector mono">SERVICES — SOLUCIONES OPERACIONALES</div>
+      <div class="logo-sector mono">SERVICES — LIMPIEZA ESPECIALIZADA</div>
     </div>
     <div class="nav-links">
       <a href="#servicios">Servicios</a>
@@ -221,11 +219,11 @@
 
 <section class="hero">
   <div class="wrap">
-    <div class="eyebrow">Soluciones especializadas · Ciudad de México</div>
+    <div class="eyebrow">Limpieza especializada · Ciudad de México</div>
     <h1>Alfombras, cristales y pisos<br>con un resultado que <em>permanece</em>.</h1>
-    <p class="lead">Servicio profesional de limpieza especializada a particulares o empresas. Cotización con respuesta en menos de 24 horas.</p>
+    <p class="lead">Servicio profesional de limpieza especializada a domicilio u oficina. Cotización gratuita, sin compromiso, respuesta en menos de 24 horas.</p>
     <div class="hero-actions">
-      <a class="btn-primary" href="#contacto">Pedir cotización →</a>
+      <a class="btn-primary" href="#contacto">Pedir cotización gratis →</a>
       <a class="btn-secondary" href="#servicios">Ver servicios</a>
     </div>
 
@@ -249,19 +247,19 @@
         <span class="service-num mono">01</span>
         <h3>Lavado de alfombras</h3>
         <p>Extracción profunda de mugre, ácaros y manchas. Secado rápido, sin dejar residuo de humedad ni olores.</p>
-        <div class="service-price mono">Desde / m² · cotización según m²</div>
+        <div class="service-price mono">Desde $XXX / m² · cotización según m²</div>
       </div>
       <div class="service-card">
         <span class="service-num mono">02</span>
         <h3>Lavado de cristales</h3>
         <p>Ventanales, fachadas y cristales interiores sin marcas ni rayas. Incluye marcos y rieles.</p>
-        <div class="service-price mono">Desde / m² · cotización según altura y acceso</div>
+        <div class="service-price mono">Desde $XXX / m² · cotización según altura y acceso</div>
       </div>
       <div class="service-card">
         <span class="service-num mono">03</span>
         <h3>Lavado de pisos</h3>
         <p>Duela, mármol, porcelanato o cemento pulido. Limpieza profunda más encerado o sellado si se requiere.</p>
-        <div class="service-price mono">Desde / m² · cotización de acuerdo a servicio</div>
+        <div class="service-price mono">Desde $XXX / m² · cotización según material</div>
       </div>
     </div>
   </div>
@@ -321,22 +319,8 @@
       <div class="eyebrow">Testimonios</div>
       <h2>Lo que dicen los primeros clientes.</h2>
     </div>
-    <div class="testi-grid">
-      <div class="testi">
-        <div class="placeholder-note"></div>
-        <p>"Quedaron impecables las alfombras de la sala, y llegaron puntuales."</p>
-        <div class="who mono">— Cliente, Coyoacán</div>
-      </div>
-      <div class="testi">
-        <div class="placeholder-note"></div>
-        <p>"Contraté el servicio para mi oficina, muy profesionales y rápidos."</p>
-        <div class="who mono">— Cliente, Cuauhtémoc</div>
-      </div>
-      <div class="testi">
-        <div class="placeholder-note"></div>
-        <p>"Los cristales del depa quedaron mejor que cuando lo entregaron."</p>
-        <div class="who mono">— Cliente, Benito Juárez</div>
-      </div>
+    <div class="testi" style="max-width:640px;">
+      <p style="font-style:normal; opacity:0.85;">Estamos arrancando y preferimos no inventar reseñas. Muy pronto aquí verás testimonios reales de nuestros primeros clientes en CDMX — mientras tanto, puedes ver el resultado real de nuestro trabajo en la comparación de arriba.</p>
     </div>
   </div>
 </section>
@@ -370,8 +354,8 @@
 
 <footer>
   <div class="wrap footer-row">
-    <div>Permanza Services — Soluciones especializadas</div>
-    <div class="mono">WhatsApp: 55 4021 7858 · contacto@permanza.com</div>
+    <div>Permanza Services — Limpieza especializada</div>
+    <div class="mono">WhatsApp: 55 4021 7858 · hola@permanza.mx</div>
   </div>
   <div class="wrap" style="margin-top:14px; font-size:0.76rem; opacity:0.5;">
     Parte de Grupo Permanza
