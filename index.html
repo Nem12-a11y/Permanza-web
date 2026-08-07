@@ -96,13 +96,15 @@
     letter-spacing:0.1em; padding:6px 10px; border-radius:2px;
   }
   .layer-dirty{
-    background:
-      repeating-linear-gradient(115deg, rgba(0,0,0,0.10) 0 2px, transparent 2px 14px),
-      linear-gradient(160deg, #8b8478, #5c5b52 60%, #47453d);
+    background-image:url("assets/piso-antes.jpg");
+    background-size:cover;
+    background-position:center;
   }
   .layer-dirty .tag{background:rgba(0,0,0,0.35); color:#F6F5F1;}
   .layer-clean{
-    background:linear-gradient(160deg, var(--sky), #ffffff 55%, var(--sky));
+    background-image:url("assets/piso-despues.jpg");
+    background-size:cover;
+    background-position:center;
     position:absolute; inset:0; display:flex; align-items:flex-end; padding:22px;
     clip-path: inset(0 50% 0 0);
   }
