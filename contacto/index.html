@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Permanza Services | Soluciones especializadas de limpieza</title>
+
+  <meta name="description" content="Permanza Services. Soluciones especializadas de limpieza: lavado de alfombras, lavado y pulido de pisos, limpiezas profundas y limpieza de cristales.">
+
+  <style>
+    :root {
+      --navy: #102844;
+      --navy-dark: #091d34;
+      --teal: #0f6b68;
+      --teal-dark: #095451;
+      --gold: #dda020;
+      --gold-dark: #c98a12;
+      --white: #ffffff;
+      --offwhite: #f7f8f8;
+      --text: #14263c;
+      --muted: #667382;
+      --line: #e3e7ea;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      background:
+        radial-gradient(circle at top, rgba(15,107,104,.10), transparent 35%),
+        var(--offwhite);
+      color: var(--text);
+      line-height: 1.5;
+    }
+
+    .page {
+      width: min(100%, 620px);
+      margin: 0 auto;
+      min-height: 100vh;
+      background: var(--white);
+      box-shadow: 0 0 40px rgba(9,29,52,.08);
+    }
+
+    /* HERO */
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 48px 26px 38px;
+      text-align: center;
+      background:
+        linear-gradient(
+          145deg,
+          rgba(255,255,255,1) 0%,
+          rgba(255,255,255,.98) 60%,
+          rgba(15,107,104,.08) 100%
+        );
+    }
+
+    .brand-mark {
+      width: 92px;
+      height: 92px;
+      margin: 0 auto 20px;
+      border: 8px solid var(--navy);
+      border-top-color: var(--gold);
+      border-radius: 50%;
+      position: relative;
+    }
+
+    .brand-mark::after {
+      content: "↗";
+      position: absolute;
+      right: -16px;
+      bottom: -12px;
+      font-size: 55px;
+      line-height: 1;
+      font-weight: 800;
+      color: var(--navy);
+      background: white;
+      border-radius: 20px;
+    }
+
+    .brand h1 {
+      font-size: clamp(32px, 9vw, 46px);
+      letter-spacing: 2px;
+      color: var(--navy);
+      font-weight: 800;
+      line-height: 1;
+    }
+
+    .brand h1 span {
+      display: block;
+      margin-top: 8px;
+      color: var(--gold);
+      letter-spacing: 7px;
+      font-weight: 600;
+      font-size: .82em;
+    }
+
+    .eyebrow {
+      margin-top: 22px;
+      color: var(--teal);
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.7px;
+    }
+
+    .hero h2 {
+      max-width: 470px;
+      margin: 10px auto 0;
+      font-size: 24px;
+      line-height: 1.25;
+      color: var(--navy);
+    }
+
+    .promise {
+      max-width: 470px;
+      margin: 18px auto 0;
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    /* FOUNDER */
+
+    .founder {
+      margin: 0 20px;
+      padding: 22px;
+      border-radius: 22px;
+      background: linear-gradient(135deg, var(--navy-dark), var(--navy));
+      color: white;
+      text-align: center;
+      box-shadow: 0 14px 35px rgba(9,29,52,.17);
+    }
+
+    .founder-label {
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .founder h3 {
+      margin-top: 4px;
+      font-size: 23px;
+    }
+
+    .founder p {
+      margin-top: 3px;
+      color: rgba(255,255,255,.75);
+      font-size: 14px;
+    }
+
+    /* CTA */
+
+    .cta-section {
+      padding: 28px 20px 12px;
+    }
+
+    .primary-cta {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      width: 100%;
+      padding: 18px 20px;
+      background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+      color: white;
+      text-decoration: none;
+      border-radius: 17px;
+      font-size: 18px;
+      font-weight: 800;
+      box-shadow: 0 10px 25px rgba(221,160,32,.25);
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+
+    .primary-cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 14px 30px rgba(221,160,32,.32);
+    }
+
+    .whatsapp-icon {
+      font-size: 25px;
+    }
+
+    .cta-note {
+      margin-top: 10px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    /* SERVICES */
+
+    .services {
+      padding: 35px 20px 20px;
+    }
+
+    .section-heading {
+      text-align: center;
+      margin-bottom: 22px;
+    }
+
+    .section-heading span {
+      display: block;
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .section-heading h2 {
+      margin-top: 5px;
+      color: var(--navy);
+      font-size: 25px;
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+
+    .service-card {
+      min-height: 145px;
+      padding: 20px 14px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: white;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 24px rgba(16,40,68,.08);
+    }
+
+    .service-icon {
+      font-size: 31px;
+      margin-bottom: 10px;
+    }
+
+    .service-card h3 {
+      color: var(--navy);
+      font-size: 15px;
+      line-height: 1.25;
+    }
+
+    /* VALUE */
+
+    .value {
+      margin: 18px 20px 5px;
+      padding: 28px 22px;
+      border-radius: 22px;
+      background: linear-gradient(135deg, var(--teal-dark), var(--teal));
+      color: white;
+    }
+
+    .value h2 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .value p {
+      color: rgba(255,255,255,.88);
+      font-size: 15px;
+    }
+
+    /* ACTIONS */
+
+    .actions {
+      padding: 30px 20px;
+    }
+
+    .actions h2 {
+      text-align: center;
+      color: var(--navy);
+      font-size: 20px;
+      margin-bottom: 17px;
+    }
+
+    .action-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+    }
+
+    .action {
+      min-height: 70px;
+      padding: 12px 10px;
+      border: 1px solid var(--line);
+      border-radius: 15px;
+      text-decoration: none;
+      color: var(--navy);
+      font-weight: 700;
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      text-align: center;
+      background: white;
+    }
+
+    .action:hover {
+      border-color: var(--teal);
+      background: rgba(15,107,104,.04);
+    }
+
+    .action-icon {
+      font-size: 21px;
+    }
+
+    /* FOOTER */
+
+    footer {
+      margin-top: 10px;
+      padding: 30px 24px 35px;
+      text-align: center;
+      background: var(--navy-dark);
+      color: white;
+    }
+
+    footer strong {
+      display: block;
+      color: var(--gold);
+      font-size: 17px;
+      margin-bottom: 6px;
+    }
+
+    footer p {
+      color: rgba(255,255,255,.72);
+      font-size: 13px;
+    }
+
+    .website {
+      display: inline-block;
+      margin-top: 15px;
+      color: white;
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    @media (min-width: 600px) {
+      .hero {
+        padding-top: 58px;
+      }
+
+      .services {
+        padding-left: 32px;
+        padding-right: 32px;
+      }
+
+      .cta-section,
+      .actions {
+        padding-left: 32px;
+        padding-right: 32px;
+      }
+
+      .founder,
+      .value {
+        margin-left: 32px;
+        margin-right: 32px;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <main class="page">
+
+    <section class="hero">
+
+      <div class="brand-mark"></div>
+
+      <div class="brand">
+        <h1>
+          PERMANZA
+          <span>SERVICES</span>
+        </h1>
+      </div>
+
+      <p class="eyebrow">
+        Soluciones especializadas de limpieza
+      </p>
+
+      <h2>
+        Limpieza profesional para mantener tu operación en movimiento.
+      </h2>
+
+      <p class="promise">
+        Servicios especializados enfocados en resultados,
+        atención profesional y continuidad operativa.
+      </p>
+
+    </section>
+
+
+    <section class="founder">
+
+      <span class="founder-label">Founder</span>
+
+      <h3>Natalia Escobar</h3>
+
+      <p>Grupo Permanza · Ciudad de México</p>
+
+    </section>
+
+
+    <section class="cta-section">
+
+      <a
+        class="primary-cta"
+        href="https://wa.me/525549404171?text=Hola%2C%20me%20interesa%20solicitar%20una%20cotizaci%C3%B3n%20de%20Permanza%20Services."
+        target="_blank"
+        rel="noopener"
+      >
+        <span class="whatsapp-icon">◉</span>
+        SOLICITAR COTIZACIÓN
+      </a>
+
+      <p class="cta-note">
+        Atención directa por WhatsApp
+      </p>
+
+    </section>
+
+
+    <section class="services">
+
+      <div class="section-heading">
+        <span>Permanza Services</span>
+        <h2>Nuestros servicios</h2>
+      </div>
+
+      <div class="service-grid">
+
+        <article class="service-card">
+          <div class="service-icon">▰</div>
+          <h3>Lavado de alfombras</h3>
+        </article>
+
+        <article class="service-card">
+          <div class="service-icon">◆</div>
+          <h3>Lavado y pulido de pisos</h3>
+        </article>
+
+        <article class="service-card">
+          <div class="service-icon">✦</div>
+          <h3>Limpiezas profundas</h3>
+        </article>
+
+        <article class="service-card">
+          <div class="service-icon">▱</div>
+          <h3>Limpieza de cristales</h3>
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <section class="value">
+
+      <h2>Grupo Permanza</h2>
+
+      <p>
+        Nace para brindar soluciones de limpieza que garanticen
+        la continuidad de la operación del cliente.
+      </p>
+
+    </section>
+
+
+    <section class="actions">
+
+      <h2>Contacto</h2>
+
+      <div class="action-grid">
+
+        <a
+          class="action"
+          href="tel:+525549404171"
+        >
+          <span class="action-icon">☎</span>
+          Llamar
+        </a>
+
+        <a
+          class="action"
+          href="mailto:contacto@permanza.com?subject=Información%20Permanza%20Services"
+        >
+          <span class="action-icon">✉</span>
+          Enviar correo
+        </a>
+
+        <a
+          class="action"
+          href="https://permanza.com"
+          target="_blank"
+          rel="noopener"
+        >
+          <span class="action-icon">⌂</span>
+          Sitio web
+        </a>
+
+        <a
+          class="action"
+          href="https://wa.me/525549404171?text=Hola%2C%20quiero%20conocer%20m%C3%A1s%20sobre%20los%20servicios%20de%20Permanza."
+          target="_blank"
+          rel="noopener"
+        >
+          <span class="action-icon">◉</span>
+          WhatsApp
+        </a>
+
+      </div>
+
+    </section>
+
+
+    <footer>
+
+      <strong>
+        Experiencia · Compromiso · Continuidad
+      </strong>
+
+      <p>
+        Soluciones especializadas de limpieza.
+      </p>
+
+      <a
+        class="website"
+        href="https://permanza.com"
+      >
+        permanza.com
+      </a>
+
+    </footer>
+
+  </main>
+
+</body>
+</html>
